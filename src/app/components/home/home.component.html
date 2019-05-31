@@ -1,0 +1,10 @@
+<div class="loading" *ngIf="!posts">
+  Cargando...
+</div>
+<div class="contrainer-fluid" *ngIf="posts">
+  <h1>{{page_title}}</h1>
+  <hr>
+  <!-- LISTADO DE ENTRADAS -->
+  <app-post-list [posts]="posts" [identity]="identity" [url]="url" (delete)="deletePost($event)"></app-post-list>
+  <!-- FIN LISTADO DE ENTRADAS -->
+</div>
